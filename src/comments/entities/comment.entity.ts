@@ -7,12 +7,12 @@ export class CommentUser {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column('text')
+  @Column({ type: 'text' })
   text: string;
 
-  @ManyToOne(() => User)
-  user: User;
-
-  @ManyToOne(() => Review, (review) => review.comment)
+  @ManyToOne(() => Review, (review) => review.comments)
   review: Review;
+
+  @ManyToOne(() => User, (user) => user.comments)
+  user: User;
 }

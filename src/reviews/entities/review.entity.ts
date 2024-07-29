@@ -13,7 +13,7 @@ export class Review {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column('number')
+  @Column('int')
   rating: number;
 
   @Column('text')
@@ -23,5 +23,5 @@ export class Review {
   user: User;
 
   @OneToMany(() => CommentUser, (comment) => comment.review)
-  comment: CommentUser[];
+  comments: CommentUser[];
 }

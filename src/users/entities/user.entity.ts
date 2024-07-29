@@ -1,14 +1,9 @@
-import { Review } from 'src/reviews/entities/review.entity';
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  OneToMany,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { UserRole } from '../user-role-enum';
+import { CommentUser } from 'src/comments/entities/comment.entity';
+import { Review } from 'src/reviews/entities/review.entity';
 
-Entity('user');
+@Entity('user')
 export class User {
   @PrimaryGeneratedColumn('uuid')
   id: number;
@@ -25,9 +20,12 @@ export class User {
   @Column({
     type: 'enum',
     enum: UserRole,
-    default: UserRole.BASIC, // Valor por defecto, si se desea
+    default: UserRole.BASIC,
   })
   role: UserRole;
+
+  @OneToMany(() => CommentUser, (comment) => comment.user)
+  comments: CommentUser[];
 
   @OneToMany(() => Review, (review) => review.user)
   reviews: Review[];
