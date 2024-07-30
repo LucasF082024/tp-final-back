@@ -1,5 +1,11 @@
-import { Column, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { UserRole } from '../user-role-enum';
+import {
+  Column,
+  DeleteDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { Role } from '../../enums/role.enum';
 import { CommentUser } from 'src/comments/entities/comment.entity';
 import { Review } from 'src/reviews/entities/review.entity';
 
@@ -17,14 +23,9 @@ export class User {
   @Column({ nullable: false })
   password: string;
 
-  
-  @Column({
-    type: 'enum',
-    enum: UserRole,
-    default: UserRole.BASIC,
-  })
-  role: UserRole;
-  
+  @Column({ type: 'enum', default: Role.USER, enum: Role })
+  role: Role;
+
   @DeleteDateColumn()
   deletedAt: Date;
 
