@@ -5,7 +5,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Role } from '../../enums/role.enum';
+import { Role } from '../../common/enums/role.enum';
 import { CommentUser } from 'src/comments/entities/comment.entity';
 import { Review } from 'src/reviews/entities/review.entity';
 
@@ -20,7 +20,7 @@ export class User {
   @Column({ unique: true, nullable: false })
   email: string;
 
-  @Column({ nullable: false })
+  @Column({ nullable: false, select: false }) //no devuelve la password
   password: string;
 
   @Column({ type: 'enum', default: Role.USER, enum: Role })

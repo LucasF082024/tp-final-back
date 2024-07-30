@@ -17,10 +17,10 @@ import { UsersService } from 'src/users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import * as bcryptjs from 'bcryptjs';
 import { AuthGuard } from 'src/guard/auth/auth.guard';
-import { Roles } from 'src/decorators/roles.decorator';
+import { Roles } from 'src/common/decorators/roles.decorator';
 import { RolesGuard } from './guard/roles.guard';
-import { Role } from 'src/enums/role.enum';
-import { Auth } from 'src/decorators/auth.decorator';
+import { Role } from 'src/common/enums/role.enum';
+import { Auth } from 'src/common/decorators/auth.decorator';
 
 interface RequestWithUser extends Request {
   user: { email: string; role: string };

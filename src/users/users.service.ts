@@ -9,11 +9,18 @@ import { Repository } from 'typeorm';
 export class UsersService {
   constructor(
     @InjectRepository(User)
-    private readonly usersRepository: Repository<User>
+    private readonly usersRepository: Repository<User>,
   ) {}
 
   async create(createUserDto: CreateUserDto) {
     return await this.usersRepository.save(createUserDto);
+  }
+
+  findOneByEmailWithPassword(email: string) {
+    return this.usersRepository.findOne({
+      where: { email },
+      select: ['id', 'name', 'email', 'password', 'role'],
+    });
   }
 
   async findOneByEmail(email: string) {
@@ -21,7 +28,7 @@ export class UsersService {
   }
 
   findAll() {
-    return this.usersRepository.find()
+    return this.usersRepository.find();
   }
 
   findOne(id: number) {

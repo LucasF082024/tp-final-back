@@ -18,12 +18,12 @@ export class AuthService {
   ) {}
 
   async register({ password, email, name }: RegisterDto) {
-    const user = await this.usersService.findOneByEmail(email);
+    const user = await this.usersService.findOneByEmailWithPassword(email);
 
     if (user) {
       throw new BadRequestException('Email already exists');
     }
-
+    console.log('se encontró al usuario');
     const hashedPassword = await bcryptjs.hash(password, 10);
 
     await this.usersService.create({
@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   async login({ email, password }: LoginDto) {
-    const user = await this.usersService.findOneByEmail(email);
+    const user = await this.usersService.findOneByEmailWithPassword(email);
 
     if (!user) {
       throw new UnauthorizedException('Invalid email');
