@@ -11,6 +11,7 @@ import { Review } from './reviews/entities/review.entity';
 import { Movie } from './movies/entities/movie.entity';
 import { Genre } from './genres/entities/genre.entity';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     ReviewsModule,
     MoviesModule,
     GenresModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],
