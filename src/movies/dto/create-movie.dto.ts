@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsArray, IsString, ValidateNested } from 'class-validator';
+import { IsArray, IsNumber, IsString, ValidateNested } from 'class-validator';
 
 export class CreateMoviesDto {
   @IsArray()
@@ -11,9 +11,15 @@ export class CreateMovieDto {
   @IsString()
   title: string;
 
-  @IsString()
-  year: string;
+  @IsNumber()
+  release_year: number;
 
   @IsString()
-  password: string;
+  overview: string;
+
+  @IsString()
+  genre: string;
+
+  @IsString()
+  poster: string;
 }

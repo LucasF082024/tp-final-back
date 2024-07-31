@@ -5,12 +5,18 @@ export class Movie {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column('text')
+  @Column({ unique: true, nullable: false })
   title: string;
 
-  @Column('text')
-  released_year: string;
+  @Column('int')
+  release_year: number;
 
   @Column('text')
-  image: string;
+  genre: string;
+
+  @Column('text')
+  poster: string;
+
+  @Column('text')
+  overview: string;
 }

@@ -13,15 +13,13 @@ import { UpdateMovieDto } from './dto/update-movie.dto';
 import { Auth } from 'src/common/decorators/auth.decorator';
 import { Role } from 'src/common/enums/role.enum';
 
-@Auth(Role.ADMIN)
 @Controller('movies')
 export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Post()
-  create(@Body() createMovieDto: CreateMoviesDto) {
-    return createMovieDto;
-    // return this.moviesService.create(createMovieDto);
+  async create(@Body() createMovieDto: CreateMoviesDto) {
+    return this.moviesService.createMovies(createMovieDto);
   }
 
   @Get()
@@ -29,9 +27,9 @@ export class MoviesController {
     return this.moviesService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.moviesService.findOne(+id);
+  @Get(':movie')
+  findOne(@Param('movie') movie: string) {
+    return this.moviesService.findByName(movie);
   }
 
   @Patch(':id')
