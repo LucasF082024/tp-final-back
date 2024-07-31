@@ -1,0 +1,325 @@
+{
+    "movies": [{
+        "title": "Deadpool & Wolverine",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+        "overview": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine."
+    },
+    {
+        "title": "Bad Boys: Ride or Die",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/nP6RliHjxsz4irTKsxe8FRhKZYl.jpg",
+        "overview": "After their late former Captain is framed, Lowrey and Burnett try to clear his name, only to end up on the run themselves."
+    },
+    {
+        "title": "Inside Out 2",
+        "release_year": 2024,
+        "genre": "Animation",
+        "poster": "https://image.tmdb.org/t/p/original/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+        "overview": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone."
+    },
+    {
+        "title": "Despicable Me 4",
+        "release_year": 2024,
+        "genre": "Animation",
+        "poster": "https://image.tmdb.org/t/p/original/wWba3TaojhK7NdycRhoQpsG0FaH.jpg",
+        "overview": "Gru and Lucy and their girls — Margo, Edith and Agnes — welcome a new member to the Gru family, Gru Jr., who is intent on tormenting his dad. Meanwhile, Gru faces a new nemesis in Maxime Le Mal and his femme fatale girlfriend Valentina, forcing the family to go on the run."
+    },
+    {
+        "title": "Justice League: Crisis on Infinite Earths Part Three",
+        "release_year": 2024,
+        "genre": "Animation",
+        "poster": "https://image.tmdb.org/t/p/original/a3q8NkM8uTh9E23VsbUOdDSbBeN.jpg",
+        "overview": "Now fully revealed as the ultimate threat to existence, the Anti-Monitor wages an unrelenting attack on the surviving Earths that struggle for survival in a pocket universe. One by one, these worlds and all their inhabitants are vaporized! On the planets that remain, even time itself is shattered, and heroes from the past join the Justice League and their rag-tag allies against the epitome of evil. But as they make their last stand, will the sacrifice of the superheroes be enough to save us all?"
+    },
+    {
+        "title": "The Garfield Movie",
+        "release_year": 2024,
+        "genre": "Animation",
+        "poster": "https://image.tmdb.org/t/p/original/p6AbOJvMQhBmffd0PIv0u8ghWeY.jpg",
+        "overview": "Garfield, the world-famous, Monday-hating, lasagna-loving indoor cat, is about to have a wild outdoor adventure! After an unexpected reunion with his long-lost father – scruffy street cat Vic – Garfield and his canine friend Odie are forced from their perfectly pampered life into joining Vic in a hilarious, high-stakes heist."
+    },
+    {
+        "title": "Deadpool",
+        "release_year": 2016,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
+        "overview": "The origin story of former Special Forces operative turned mercenary Wade Wilson, who, after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life."
+    },
+    {
+        "title": "My Spy The Eternal City",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/Bf3vCfM94bSJ1saZlyi0UW0e0U.jpg",
+        "overview": "JJ, a veteran CIA agent, reunites with his protégé Sophie, in order to prevent a catastrophic nuclear plot targeting the Vatican."
+    },
+    {
+        "title": "Kingdom of the Planet of the Apes",
+        "release_year": 2024,
+        "genre": "Science Fiction",
+        "poster": "https://image.tmdb.org/t/p/original/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
+        "overview": "Several generations following Caesar's reign, apes – now the dominant species – live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all he's known about the past and to make choices that will define a future for apes and humans alike."
+    },
+    {
+        "title": "A Quiet Place: Day One",
+        "release_year": 2024,
+        "genre": "Horror",
+        "poster": "https://image.tmdb.org/t/p/original/yrpPYKijwdMHyTGIOd1iK1h0Xno.jpg",
+        "overview": "As New York City is invaded by alien creatures who hunt by sound, a woman named Sam fights to survive with her cat."
+    },
+    {
+        "title": "Furiosa: A Mad Max Saga",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+        "overview": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home."
+    },
+    {
+        "title": "Descendants: The Rise of Red",
+        "release_year": 2024,
+        "genre": "Family",
+        "poster": "https://image.tmdb.org/t/p/original/8fYluTtB3b3HKO7KQa5tzrvGaps.jpg",
+        "overview": "After the Queen of Hearts incites a coup on Auradon, her rebellious daughter Red and Cinderella's perfectionist daughter Chloe join forces and travel back in time to try to undo the traumatic event that set Red's mother down her villainous path."
+    },
+    {
+        "title": "Deadpool 2",
+        "release_year": 2018,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+        "overview": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life."
+    },
+    {
+        "title": "3 Days in Malay",
+        "release_year": 2023,
+        "genre": "War",
+        "poster": "https://image.tmdb.org/t/p/original/hqnfqeCILvgKGWKOut5lVdxdeJh.jpg",
+        "overview": "Marines stationed at an airfield in Malay during WWII get wind of a coming raid by the Japanese. Unable to get reinforcements approved, they engage in a harrowing 3-day battle against enemy forces."
+    },
+    {
+        "title": "Godzilla x Kong: The New Empire",
+        "release_year": 2024,
+        "genre": "Science Fiction",
+        "poster": "https://image.tmdb.org/t/p/original/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
+        "overview": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own."
+    },
+    {
+        "title": "Civil War",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg",
+        "overview": "In the near future, a group of war journalists attempt to survive while reporting the truth as the United States stands on the brink of civil war."
+    },
+   [
+    {
+        "title": "Monkey Man",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/4lhR4L2vzzjl68P1zJyCH755Oz4.jpg",
+        "overview": "Kid is an anonymous young man who ekes out a meager living in an underground fight club where, night after night, wearing a gorilla mask, he is beaten bloody by more popular fighters for cash. After years of suppressed rage, Kid discovers a way to infiltrate the enclave of the city’s sinister elite. As his childhood trauma boils over, his mysteriously scarred hands unleash an explosive campaign of retribution to settle the score with the men who took everything from him."
+    },
+    {
+        "title": "Once Upon a Deadpool",
+        "release_year": 2018,
+        "genre": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/original/5Ka49BWWyKMXr93YMbH5wLN7aAM.jpg",
+        "overview": "A kidnapped Fred Savage is forced to endure Deadpool's PG-13 rendition of Deadpool 2 as a Princess Bride-esque story that's full of magic, wonder & zero F's."
+    },
+    {
+        "title": "The Strangers: Chapter 1",
+        "release_year": 2024,
+        "genre": "Horror",
+        "poster": "https://image.tmdb.org/t/p/original/cdFZoQDxLRRWXLB3kxCnc674dBF.jpg",
+        "overview": "After their car breaks down in an eerie small town, a young couple are forced to spend the night in a remote cabin. Panic ensues as they are terrorized by three masked strangers who strike with no mercy and seemingly no motives."
+    },
+    {
+        "title": "Underground Monster",
+        "release_year": 2023,
+        "genre": "Horror",
+        "poster": "https://image.tmdb.org/t/p/original/lWVwWRLqpS1OaNg7KT0ZecSW0PK.jpg",
+        "overview": "Near a remote town, the repeated dumping of toxic waste causes an underground cave dweller to mutate into a hideous monster. A construction team that is digging a tunnel accidentally disturb the creature's habitat causing it to attack."
+    },
+    {
+        "title": "Under Paris",
+        "release_year": 2024,
+        "genre": "Fantasy",
+        "poster": "https://image.tmdb.org/t/p/original/qZPLK5ktRKa3CL4sKRZtj8UlPYc.jpg",
+        "overview": "In order to save Paris from an international bloodbath, a grieving scientist is forced to face her tragic past when a giant shark appears in the Seine."
+    },
+    {
+        "title": "Deadpool: No Good Deed",
+        "release_year": 2017,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/wlKU9yB0Q8nfPMakBcSBT0JGS7.jpg",
+        "overview": "Deadpool sees an opportunity to save the day, but it doesn't go entirely as planned."
+    },
+    {
+        "title": "Inside Out",
+        "release_year": 2015,
+        "genre": "Animation",
+        "poster": "https://image.tmdb.org/t/p/original/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+        "overview": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home."
+    },
+    {
+        "title": "The Ministry of Ungentlemanly Warfare",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/8aF0iAKH9MJMYAZdi0Slg77RYa2.jpg",
+        "overview": "During World War II, the British Army assigns a group of competent soldiers to carry out a mission against the Nazi forces behind enemy lines... A true story about a secret British WWII organization – the Special Operations Executive. Founded by Winston Churchill, their irregular warfare against the Germans helped to change the course of the war, and gave birth to modern black operations."
+    },
+    {
+        "title": "Escape from the 21st Century",
+        "release_year": 2024,
+        "genre": "Science Fiction",
+        "poster": "https://image.tmdb.org/t/p/original/nZQPbD7IEKWiUDK7s9GKHwqP88g.jpg",
+        "overview": "On Planet K, unknown to anyone on Earth, three teenagers chosen by fate can travel back and forth twenty years into the future by sneezing. In the face of a shocking plot to destroy the world, they have nothing but crystal-clear stupidity and single-digit combat power, so how can they transform into heroes and fight against the super-villainous villains who are intent on destroying the world? How can they turn into heroes and fight against the super baddest villains intent on destroying the world? The 'King Bomb' brothers, who look like grown-ups but have minds like no other, will save the future on behalf of the K-Star!"
+    },
+    {
+        "title": "Kung Fu Panda 4",
+        "release_year": 2024,
+        "genre": "Animation",
+        "poster": "https://image.tmdb.org/t/p/original/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg",
+        "overview": "Po is gearing up to become the spiritual leader of his Valley of Peace, but also needs someone to take his place as Dragon Warrior. As such, he will train a new kung fu practitioner for the spot and will encounter a villain called the Chameleon who conjures villains from the past."
+    },
+    {
+        "title": "The Jack in the Box: Rises",
+        "release_year": 2024,
+        "genre": "Horror",
+        "poster": "https://image.tmdb.org/t/p/original/oDVjlCTSyF6Fh8Fpm683MyGGnSG.jpg",
+        "overview": "When a creepy Jack-in-the-Box is discovered and opened on the grounds of an exclusive girls' school, six brave students soon enter a fight to the finish against the unleashed demon."
+    },
+    {
+        "title": "The Fall Guy",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/tSz1qsmSJon0rqjHBxXZmrotuse.jpg",
+        "overview": "Fresh off an almost career-ending accident, stuntman Colt Seavers has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job."
+    },
+    {
+        "title": "Black Noise",
+        "release_year": 2023,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/snKpXexv5dtWqEKEmXrJtp8QGQC.jpg",
+        "overview": "Members of an elite security team deployed to rescue a VIP on an exclusive island.The rescue mission becomes a desperate attempt to survive, escape the island and elude the sinister presence that seeks to harm them."
+    },
+    {
+        "title": "Deadpool The Musical 2 - Ultimate Disney Parody!",
+        "release_year": 2018,
+        "genre": "Music",
+        "poster": "https://image.tmdb.org/t/p/original/bcxfS7d5V9a6oojs7CnIZ69tbKs.jpg",
+        "overview": "Watch as Deadpool sings and slays his way through a series of Disney songs and superhero teams, from The X-Men to The Avengers & more!"
+    },
+    {
+        "title": "Twisters",
+        "release_year": 2024,
+        "genre": "Drama",
+        "poster": "https://image.tmdb.org/t/p/original/pjnD08FlMAIXsfOLKQbvmO0f0MD.jpg",
+        "overview": "As storm season intensifies, the paths of former storm chaser Kate Carter and reckless social-media superstar Tyler Owens collide when terrifying phenomena never seen before are unleashed. The pair and their competing teams find themselves squarely in the paths of multiple storm systems converging over central Oklahoma in the fight of their lives."
+    },
+    {
+        "title": "Trigger Warning",
+        "release_year": 2024,
+        "genre": "Action",
+        "poster": "https://image.tmdb.org/t/p/original/lJN24nn28s5afC1UnLPYRgYOp1K.jpg",
+        "overview": "A Special Forces commando uncovers a dangerous conspiracy when she returns to her hometown looking for answers into her beloved father's death."
+    },{
+    "title": "My Fault",
+    "release_year": 2023,
+    "genre": "Drama",
+    "overview": "Noah must leave her city, boyfriend, and friends to move into William Leister's mansion, the flashy and wealthy husband of her mother Rafaela. As a proud and independent 17 year old, Noah resists living in a mansion surrounded by luxury. However, it is there where she meets Nick, her new stepbrother, and the clash of their strong personalities becomes evident from the very beginning.",
+    "poster": "https://image.tmdb.org/t/p/original/w46Vw536HwNnEzOa7J24YH9DPRS.jpg"
+  },
+  {
+    "title": "Boneyard",
+    "release_year": 2024,
+    "genre": "Action",
+    "overview": "After Police Chief Carter discovers the remains of eleven women, FBI Special Agent Petrovick is recruited to profile the serial killer responsible for the infamous \"boneyard\" killings. As the police force, narcotics agency, and FBI lock horns, a tangled web of intrigue turns everyone into a suspect.",
+    "poster": "https://image.tmdb.org/t/p/original/xkNK36hQv8SWiwiQoE7naRfP0zL.jpg"
+  },
+  {
+    "title": "The Hunted",
+    "release_year": 2024,
+    "genre": "Horror",
+    "overview": "After their boat capsizes in the Mediterranean Sea, a group of refugees are rescued by rich Europeans who offer them shelter on an idyllic island. But the miracle soon becomes a nightmare when the saviors turn into ruthless manhunters.",
+    "poster": "https://image.tmdb.org/t/p/original/zgx7I0JfmHbGcbveNk4EK3jFuMk.jpg"
+  },
+  {
+    "title": "Sana",
+    "release_year": 2023,
+    "genre": "Horror",
+    "overview": "Takashi Shimizu's newest film is about a mysterious cassette tape containing a melody. People who hear this melody gradually begin to hum it themselves and become involved in a mysterious incident. What is the mystery behind this melody?",
+    "poster": "https://image.tmdb.org/t/p/original/ziWLHm8xjuG2jQf9iIRC7XZZom8.jpg"
+  },
+  {
+    "title": "Migration",
+    "release_year": 2023,
+    "genre": "Animation",
+    "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+    "poster": "https://image.tmdb.org/t/p/original/ldfCF9RhR40mppkzmftxapaHeTo.jpg"
+  },
+  {
+    "title": "MR-9: Do or Die",
+    "release_year": 2023,
+    "genre": "Action",
+    "overview": "Elite Bangladeshi CIA agent Masud Rana – codename MR-9 – teams up with an American CIA operative to bring down an international criminal organization headed by a ruthless businessman.",
+    "poster": "https://image.tmdb.org/t/p/original/yF2g3MDacpZTMywh97qghW6Y0H4.jpg"
+  },
+  {
+    "title": "Miraculous World: Paris, Tales of Shadybug and Claw Noir",
+    "release_year": 2023,
+    "genre": "Animation",
+    "overview": "Miraculous holders from another world appear in Paris. They come from a parallel universe where everything is reversed: the holders of Ladybug and Black Cat Miraculouses, Shadybug and Claw Noir, are the bad guys, and the holder of the Butterfly Miraculous, Hesperia, is a superhero. Ladybug and Cat Noir will have to help Hesperia counter the attacks of their evil doubles and prevent them from seizing the Butterfly's Miraculous. Can our heroes also help Hesperia make Shadybug and Claw Noir better people?",
+    "poster": "https://image.tmdb.org/t/p/original/7Md3nuV0ZprBTnkdR3OrUCEsrSP.jpg"
+  },
+  {
+    "title": "Autumn and the Black Jaguar",
+    "release_year": 2024,
+    "genre": "Adventure",
+    "overview": "Grown up in the Amazon rainforest, Autumn lives with Hope, the cute baby jaguar she adopted. However, a circumstance forces Autumn to return to New York. Autumn goes back into the jungle to save Hope from grave danger.",
+    "poster": "https://image.tmdb.org/t/p/original/ocHu00nOZzK0m9BsFdrFg3SglS0.jpg"
+  },
+  {
+    "title": "Dune: Part Two",
+    "release_year": 2024,
+    "genre": "Science Fiction",
+    "overview": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+    "poster": "https://image.tmdb.org/t/p/original/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+  },
+  {
+    "title": "Deadpool The Musical",
+    "release_year": 2017,
+    "genre": "Comedy",
+    "overview": "Who knew the 'Merc with a Mouth' could sing?! Check out this fan-made musical mashup of “Deadpool” and “Beauty & the Beast” featuring Wade’s own NSFW, mature-audiences version of the classic song “Gaston” from the original musical!",
+    "poster": "https://image.tmdb.org/t/p/original/xQfActArWkWXFgRnda3yfrwf8r0.jpg"
+  },
+  {
+    "title": "Vassalord.",
+    "release_year": 2013,
+    "genre": "Animation",
+    "overview": "Charley, a cyborg vampire who does the Vatican's dirty work, is the thrall of the local vampire playboy Johnny Rayflo. As the two fight crime—and each other—hilarity, violence and sacrilege ensue! But can Charley resist his own desperate cravings for blood? Find out as the devilish duo go up against a childlike vampire princess, a mysterious branch of the Unitarian Church...and one another.",
+    "poster": "https://image.tmdb.org/t/p/original/vyzS55N83jgDtgMeyYJOD7ppYMz.jpg"
+  },
+  {
+    "title": "An Ideal Father",
+    "release_year": 2024,
+    "genre": "Drama",
+    "overview": "Michel, the jovial owner of the only café in a small Normandy town, sees his life turned upside down when his teenage daughter is murdered. The community has his back but soon rumor spreads and Michel is singled out. From the ideal father, he becomes the ideal culprit.",
+    "poster": "https://image.tmdb.org/t/p/original/4xJd3uwtL1vCuZgEfEc8JXI9Uyx.jpg"
+  },
+  {
+    "title": "Atlas",
+    "release_year": 2024,
+    "genre": "Science Fiction",
+    "overview": "A brilliant counterterrorism analyst with a deep distrust of AI discovers it might be her only hope when a mission to capture a renegade robot goes awry.",
+    "poster": "https://image.tmdb.org/t/p/original/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r.jpg"
+  },
+  {
+    "title": "The Last Kumite",
+    "release_year": 2024,
+    "genre": "Action",
+    "overview": "When Karate champion Michael Rivers wins the last tournament of his career, shady businessman Ron Hall offers him the opportunity to fight in an illegal Kumite in Bulgaria against the world’s best martial artists. When Michael declines, Hall has his daughter kidnapped and, in order to rescue her, Rivers is left with no choice but to compete in the deadly tournament. Arriving in Bulgaria, he finds out that he is not the only fighter whose loved one was taken. Rivers enlists the help of trainers Master Loren, and Julie Jackson but will it be enough for him to win the tournament and save his daughter’s life?",
+    "poster": "https://image.tmdb.org/t/p/original/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg"
+  }]
+    ]
+}

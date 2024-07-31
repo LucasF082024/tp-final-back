@@ -28,7 +28,7 @@ import { AuthModule } from './auth/auth.module';
         database: configService.get<string>('DB_DATABASE'),
         entities: ['dist/**/*.entity.{ts,js}'],
         synchronize: true,
-        logging: true,
+        logging: false,
       }),
     }),
     UsersModule,
@@ -36,7 +36,7 @@ import { AuthModule } from './auth/auth.module';
     ReviewsModule,
     MoviesModule,
     GenresModule,
-    AuthModule
+    AuthModule,
   ],
   controllers: [],
   providers: [],

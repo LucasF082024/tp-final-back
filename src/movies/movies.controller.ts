@@ -12,6 +12,7 @@ import { CreateMoviesDto } from './dto/create-movie.dto';
 import { UpdateMovieDto } from './dto/update-movie.dto';
 import { Auth } from 'src/common/decorators/auth.decorator';
 import { Role } from 'src/common/enums/role.enum';
+import { GenresService } from 'src/genres/genres.service';
 
 @Controller('movies')
 export class MoviesController {
