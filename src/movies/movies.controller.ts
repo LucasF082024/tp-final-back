@@ -18,10 +18,12 @@ import { ActiveUser } from 'src/common/decorators/active-user.decorator';
 import { ActiveUserInterface } from 'src/common/interfaces/active-user.interface';
 
 @Controller('movies')
+@Auth(Role.USER)
 export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Post()
+  @Auth(Role.ADMIN)
   async create(@Body() createMovieDto: CreateMoviesDto) {
     return this.moviesService.createMovies(createMovieDto);
   }
@@ -59,7 +61,6 @@ export class MoviesController {
   }
 
   @Get(':id')
-  @Auth(Role.USER)
   findReviews(@Param('id') id: string) {
     return this.moviesService.findReviews(+id);
   }
@@ -70,7 +71,6 @@ export class MoviesController {
   }
 
   @Post(':id')
-  @Auth(Role.USER)
   createReview(
     @Param('id') id: string,
     @Body() createReviewDto: CreateReviewDto,
@@ -80,6 +80,7 @@ export class MoviesController {
   }
 
   @Delete(':id')
+  @Auth(Role.ADMIN)
   remove(@Param('id') id: string) {
     return this.moviesService.remove(+id);
   }

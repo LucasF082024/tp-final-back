@@ -1,9 +1,20 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { GenresService } from './genres.service';
 import { CreateGenreDto } from './dto/create-genre.dto';
 import { UpdateGenreDto } from './dto/update-genre.dto';
+import { Auth } from 'src/common/decorators/auth.decorator';
+import { Role } from 'src/common/enums/role.enum';
 
 @Controller('genres')
+@Auth(Role.ADMIN)
 export class GenresController {
   constructor(private readonly genresService: GenresService) {}
 
