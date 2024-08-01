@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateReviewDto } from './dto/create-review.dto';
 import { UpdateReviewDto } from './dto/update-review.dto';
 import { Review } from './entities/review.entity';
@@ -58,8 +58,7 @@ export class ReviewsService {
     return this.reviewRepository.save({ ...review, ...updateReviewDto });
   }
 
-  async remove(id: number) {
-    const review = await this.reviewRepository.findOneBy({ id });
-    return `This action removes a #${id} review`;
+  async softRemove(id: number): Promise<void> {
+    await this.reviewRepository.delete(id);
   }
 }

@@ -22,15 +22,6 @@ export class Review {
   @Column('text')
   text: string;
 
-  @Column({ type: 'timestamp', nullable: true })
-  deletedAt: Date | null; // Campo para el soft delete
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
-
   @ManyToOne(() => User, (user) => user.reviews)
   user: User;
 

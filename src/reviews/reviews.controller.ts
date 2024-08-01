@@ -41,7 +41,7 @@ export class ReviewsController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.reviewsService.remove(+id);
+  softRemove(@Param('id') id: string) {
+    return this.reviewsService.softRemove(+id);
   }
 }
