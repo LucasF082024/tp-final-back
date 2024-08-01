@@ -102,16 +102,43 @@ export class MoviesService {
       where: { movie: { id: movieId } },
       relations: ['user'], // Incluye la relación con User
     });
-
+    const movie = await this.movieRepository.findOne({
+      where: { id: movieId },
+      relations: ['genre'], // Incluye la relación con 'genre' si 'genre' es el nombre de la relación en tu entidad Movie
+    });
+    console.log(movie);
+    const genre = movie.genre.description;
     return reviews.map((review) => ({
       id: review.id,
       rating: review.rating,
       text: review.text,
+      genre: genre,
       userName: review.user?.name, // Incluye el nombre del usuario
     }));
   }
 
-  findOneById(id: number) {
-    return this.movieRepository.findOneBy({ id });
+  async findOneById(movieId: number) {
+    return this.findMovieWithGenreDescription(movieId);
+  }
+
+  async findMovieWithGenreDescription(movieId: number): Promise<any> {
+    const movie = await this.movieRepository.findOne({
+      where: { id: movieId },
+      relations: ['genre'], // Asumiendo que la relación se llama 'genre'
+    });
+
+    if (!movie) {
+      throw new Error(`Movie with ID ${movieId} not found.`);
+    }
+
+    // Transformar el resultado para devolver solo la descripción del género
+    return {
+      id: movie.id,
+      title: movie.title,
+      release_year: movie.release_year,
+      poster: movie.poster,
+      overview: movie.overview,
+      genre: movie.genre ? movie.genre.description : null, // Solo la descripción del género
+    };
   }
 }

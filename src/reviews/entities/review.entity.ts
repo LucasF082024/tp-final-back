@@ -16,7 +16,7 @@ export class Review {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column('int')
+  @Column('float', { nullable: false })
   rating: number;
 
   @Column('text')
