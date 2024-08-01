@@ -9,13 +9,19 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Movie } from './entities/movie.entity';
 import { ILike, Like, Repository } from 'typeorm';
 import { GenresService } from 'src/genres/genres.service';
+import { CommentUser } from 'src/comments/entities/comment.entity';
+import { Review } from 'src/reviews/entities/review.entity';
+import { UsersService } from 'src/users/users.service';
 
 @Injectable()
 export class MoviesService {
   constructor(
     @InjectRepository(Movie)
     private readonly movieRepository: Repository<Movie>,
+    @InjectRepository(Review)
+    private readonly reviewRepository: Repository<Review>,
     private readonly genresService: GenresService,
+    private readonly usersService: UsersService
   ) {}
 
   async createMovie(createMovieDto: CreateMovieDto): Promise<Movie> {
@@ -76,5 +82,30 @@ export class MoviesService {
 
   remove(id: number) {
     return `This action removes a #${id} movie`;
+  }
+
+  async createReview(idMovie,{text,rating},{email}){
+    const movie = await this.movieRepository.findOne({
+      where: { id: idMovie },
+    });
+    const user = await this.usersService.findOneByEmail(email)
+    const review = new Review()
+    review.rating = rating
+    review.text = text
+    review.movie = movie
+    review.user = user
+    if (movie.reviews) {
+      movie.reviews.push(review);
+    } else {
+      movie.reviews = [review];
+    }
+    return await this.reviewRepository.save(review)
+  }
+
+  async findReviews(id: number){
+    const movie = await this.movieRepository.findOne({
+      where: { id: id },
+    });
+    return movie.reviews
   }
 }

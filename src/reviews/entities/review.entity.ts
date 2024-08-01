@@ -1,4 +1,5 @@
 import { CommentUser } from 'src/comments/entities/comment.entity';
+import { Movie } from 'src/movies/entities/movie.entity';
 import { User } from 'src/users/entities/user.entity';
 import {
   Column,
@@ -21,6 +22,9 @@ export class Review {
 
   @ManyToOne(() => User, (user) => user.reviews)
   user: User;
+
+  @ManyToOne(() => Movie, (movie) => movie.reviews)
+  movie: Movie;
 
   @OneToMany(() => CommentUser, (comment) => comment.review)
   comments: CommentUser[];

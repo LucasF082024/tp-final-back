@@ -13,6 +13,9 @@ import { UpdateMovieDto } from './dto/update-movie.dto';
 import { Auth } from 'src/common/decorators/auth.decorator';
 import { Role } from 'src/common/enums/role.enum';
 import { GenresService } from 'src/genres/genres.service';
+import { CreateReviewDto } from 'src/reviews/dto/create-review.dto';
+import { ActiveUser } from 'src/common/decorators/active-user.decorator';
+import { ActiveUserInterface } from 'src/common/interfaces/active-user.interface';
 
 @Controller('movies')
 export class MoviesController {
@@ -36,6 +39,18 @@ export class MoviesController {
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateMovieDto: UpdateMovieDto) {
     return this.moviesService.update(+id, updateMovieDto);
+  }
+
+  @Get(':id')
+  @Auth(Role.USER)
+  findReviews(@Param('id') id:string){
+    return this.moviesService.findReviews(+id)
+  }
+
+  @Post(':id')
+  @Auth(Role.USER)
+  createReview(@Param('id') id: string, @Body() createReviewDto: CreateReviewDto,@ActiveUser() user: ActiveUserInterface) {
+    return this.moviesService.createReview(+id, createReviewDto,user);
   }
 
   @Delete(':id')

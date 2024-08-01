@@ -4,9 +4,15 @@ import { MoviesController } from './movies.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Movie } from './entities/movie.entity';
 import { GenresModule } from 'src/genres/genres.module';
+import { UsersModule } from 'src/users/users.module';
+import { Review } from 'src/reviews/entities/review.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Movie]), GenresModule],
+  imports: [
+    TypeOrmModule.forFeature([Movie, Review]), // Agrega aquí las entidades Movie y Review
+    GenresModule,
+    UsersModule,
+  ],
   controllers: [MoviesController],
   providers: [MoviesService],
 })

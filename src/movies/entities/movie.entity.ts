@@ -1,5 +1,6 @@
 import { Genre } from 'src/genres/entities/genre.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Review } from 'src/reviews/entities/review.entity';
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('movie')
 export class Movie {
@@ -20,4 +21,7 @@ export class Movie {
 
   @ManyToOne(() => Genre, (genre) => genre.movies)
   genre: Genre;
+
+  @OneToMany(() => Review, (review) => review.movie)
+  reviews: Review[];
 }
