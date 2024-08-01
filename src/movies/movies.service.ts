@@ -36,28 +36,26 @@ export class MoviesService {
       genre: genreEntity, // Asociar el género encontrado
     });
 
-    return this.movieRepository.save(movie);
+    return await this.movieRepository.save(movie);
   }
-  //-------------------------------------------------------------------
-  async createMovies(createMovieDto: CreateMoviesDto) {
-    const MOVIES = [];
-    const { movies } = createMovieDto;
-    movies.map(async (mov) => {
-      const movie = await this.movieRepository.findOneBy({
+
+  async createMovies(createMoviesDto: CreateMoviesDto) {
+    const { movies } = createMoviesDto;
+    for (const mov of movies) {
+      const existingMovie = await this.movieRepository.findOneBy({
         title: mov.title,
       });
 
-      if (movie) {
-        return;
-      }
+      if (existingMovie) continue;
+
       await this.genresService.create({ description: mov.genre });
-      this.createMovie(mov);
-    });
+      await this.createMovie(mov);
+    }
     return 'This action adds bunch of movies';
   }
 
   async findByName(title: string): Promise<Movie[]> {
-    return this.movieRepository.find({
+    return await this.movieRepository.find({
       where: {
         title: ILike(`${title}%`),
       },
