@@ -68,8 +68,20 @@ export class MoviesService {
     });
   }
 
-  findAll() {
-    return this.movieRepository.find();
+  async findAll(): Promise<any[]> {
+    const movies = await this.movieRepository.find({
+      relations: ['genre'], // Incluye la relación con 'genre'
+    });
+
+    // Opcionalmente, transformar los datos para ajustar el formato de salida
+    return movies.map((movie) => ({
+      id: movie.id,
+      title: movie.title,
+      release_year: movie.release_year,
+      poster: movie.poster,
+      overview: movie.overview,
+      genre: movie.genre ? movie.genre.description : null, // Solo la descripción del género
+    }));
   }
 
   findOne(id: number) {
