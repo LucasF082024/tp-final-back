@@ -43,14 +43,23 @@ export class MoviesController {
 
   @Get(':id')
   @Auth(Role.USER)
-  findReviews(@Param('id') id:string){
-    return this.moviesService.findReviews(+id)
+  findReviews(@Param('id') id: string) {
+    return this.moviesService.findReviews(+id);
+  }
+
+  @Get('id/:id')
+  findOneById(@Param('id') id: string) {
+    return this.moviesService.findOneById(+id);
   }
 
   @Post(':id')
   @Auth(Role.USER)
-  createReview(@Param('id') id: string, @Body() createReviewDto: CreateReviewDto,@ActiveUser() user: ActiveUserInterface) {
-    return this.moviesService.createReview(+id, createReviewDto,user);
+  createReview(
+    @Param('id') id: string,
+    @Body() createReviewDto: CreateReviewDto,
+    @ActiveUser() user: ActiveUserInterface,
+  ) {
+    return this.moviesService.createReview(+id, createReviewDto, user);
   }
 
   @Delete(':id')

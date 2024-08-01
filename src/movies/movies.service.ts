@@ -21,7 +21,7 @@ export class MoviesService {
     @InjectRepository(Review)
     private readonly reviewRepository: Repository<Review>,
     private readonly genresService: GenresService,
-    private readonly usersService: UsersService
+    private readonly usersService: UsersService,
   ) {}
 
   async createMovie(createMovieDto: CreateMovieDto): Promise<Movie> {
@@ -84,28 +84,32 @@ export class MoviesService {
     return `This action removes a #${id} movie`;
   }
 
-  async createReview(idMovie,{text,rating},{email}){
+  async createReview(idMovie, { text, rating }, { email }) {
     const movie = await this.movieRepository.findOne({
       where: { id: idMovie },
     });
-    const user = await this.usersService.findOneByEmail(email)
-    const review = new Review()
-    review.rating = rating
-    review.text = text
-    review.movie = movie
-    review.user = user
+    const user = await this.usersService.findOneByEmail(email);
+    const review = new Review();
+    review.rating = rating;
+    review.text = text;
+    review.movie = movie;
+    review.user = user;
     if (movie.reviews) {
       movie.reviews.push(review);
     } else {
       movie.reviews = [review];
     }
-    return await this.reviewRepository.save(review)
+    return await this.reviewRepository.save(review);
   }
 
-  async findReviews(id: number){
+  async findReviews(id: number) {
     const movie = await this.movieRepository.findOne({
       where: { id: id },
     });
-    return movie.reviews
+    return movie.reviews;
+  }
+
+  findOneById(id: number) {
+    return this.movieRepository.findOneBy({ id });
   }
 }
