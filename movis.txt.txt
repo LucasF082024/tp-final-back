@@ -111,7 +111,6 @@
         "poster": "https://image.tmdb.org/t/p/original/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg",
         "overview": "In the near future, a group of war journalists attempt to survive while reporting the truth as the United States stands on the brink of civil war."
     },
-   [
     {
         "title": "Monkey Man",
         "release_year": 2024,
@@ -321,5 +320,5 @@
     "overview": "When Karate champion Michael Rivers wins the last tournament of his career, shady businessman Ron Hall offers him the opportunity to fight in an illegal Kumite in Bulgaria against the world’s best martial artists. When Michael declines, Hall has his daughter kidnapped and, in order to rescue her, Rivers is left with no choice but to compete in the deadly tournament. Arriving in Bulgaria, he finds out that he is not the only fighter whose loved one was taken. Rivers enlists the help of trainers Master Loren, and Julie Jackson but will it be enough for him to win the tournament and save his daughter’s life?",
     "poster": "https://image.tmdb.org/t/p/original/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg"
   }]
-    ]
+    
 }

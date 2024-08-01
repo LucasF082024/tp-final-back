@@ -84,7 +84,7 @@ export class MoviesService {
     return `This action removes a #${id} movie`;
   }
 
-  async createReview(idMovie, { text, rating }, { email }) {
+  async createReview(idMovie: number, { text, rating }, { email }) {
     const movie = await this.movieRepository.findOne({
       where: { id: idMovie },
     });
@@ -94,19 +94,21 @@ export class MoviesService {
     review.text = text;
     review.movie = movie;
     review.user = user;
-    if (movie.reviews) {
-      movie.reviews.push(review);
-    } else {
-      movie.reviews = [review];
-    }
     return await this.reviewRepository.save(review);
   }
 
-  async findReviews(id: number) {
-    const movie = await this.movieRepository.findOne({
-      where: { id: id },
+  async findReviews(movieId: number): Promise<any[]> {
+    const reviews = await this.reviewRepository.find({
+      where: { movie: { id: movieId } },
+      relations: ['user'], // Incluye la relación con User
     });
-    return movie.reviews;
+
+    return reviews.map((review) => ({
+      id: review.id,
+      rating: review.rating,
+      text: review.text,
+      userName: review.user?.name, // Incluye el nombre del usuario
+    }));
   }
 
   findOneById(id: number) {

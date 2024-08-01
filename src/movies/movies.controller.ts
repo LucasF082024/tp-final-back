@@ -31,7 +31,7 @@ export class MoviesController {
     return this.moviesService.findAll();
   }
 
-  @Get(':movie')
+  @Get('get-movie/:movie')
   findOne(@Param('movie') movie: string) {
     return this.moviesService.findByName(movie);
   }
