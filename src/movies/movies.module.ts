@@ -6,10 +6,11 @@ import { Movie } from './entities/movie.entity';
 import { GenresModule } from 'src/genres/genres.module';
 import { UsersModule } from 'src/users/users.module';
 import { Review } from 'src/reviews/entities/review.entity';
+import { Genre } from 'src/genres/entities/genre.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Movie, Review]), // Agrega aquí las entidades Movie y Review
+    TypeOrmModule.forFeature([Movie, Review, Genre]), // Agrega aquí las entidades Movie y Review
     GenresModule,
     UsersModule,
   ],

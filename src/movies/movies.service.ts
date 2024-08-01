@@ -12,6 +12,7 @@ import { GenresService } from 'src/genres/genres.service';
 import { CommentUser } from 'src/comments/entities/comment.entity';
 import { Review } from 'src/reviews/entities/review.entity';
 import { UsersService } from 'src/users/users.service';
+import { Genre } from 'src/genres/entities/genre.entity';
 
 @Injectable()
 export class MoviesService {
@@ -20,6 +21,8 @@ export class MoviesService {
     private readonly movieRepository: Repository<Movie>,
     @InjectRepository(Review)
     private readonly reviewRepository: Repository<Review>,
+    @InjectRepository(Genre)
+    private readonly genreRepository: Repository<Genre>,
     private readonly genresService: GenresService,
     private readonly usersService: UsersService,
   ) {}
@@ -60,14 +63,62 @@ export class MoviesService {
     return 'This action adds bunch of movies';
   }
 
-  async findByName(title: string): Promise<Movie[]> {
-    return await this.movieRepository.find({
+  async findByName(title: string): Promise<any[]> {
+    const movies = await this.movieRepository.find({
       where: {
         title: ILike(`${title}%`),
       },
+      relations: ['genre'], // Incluye la relación con 'genre'
     });
+
+    // Transformar la respuesta para solo incluir la descripción del género
+    return movies.map((movie) => ({
+      id: movie.id,
+      title: movie.title,
+      release_year: movie.release_year,
+      poster: movie.poster,
+      overview: movie.overview,
+      genre: movie.genre ? movie.genre.description : null, // Solo la descripción del género
+    }));
   }
 
+  async findAllByGenre(genreName: string): Promise<any[]> {
+    const genreId = await this.findGenreIdByName(genreName);
+
+    if (!genreId) {
+      throw new Error(`Genre with name ${genreName} not found.`);
+    }
+
+    const movies = await this.movieRepository.find({
+      where: {
+        genre: {
+          id: genreId,
+        },
+      },
+      relations: ['genre'], // Incluye la relación con 'genre'
+    });
+
+    // Transformar la respuesta para solo incluir la descripción del género
+    return movies.map((movie) => ({
+      id: movie.id,
+      title: movie.title,
+      release_year: movie.release_year,
+      poster: movie.poster,
+      overview: movie.overview,
+      genre: movie.genre ? movie.genre.description : null, // Solo la descripción del género
+    }));
+  }
+
+  private async findGenreIdByName(name: string): Promise<number | null> {
+    const genre = await this.genreRepository.findOne({
+      where: {
+        description: ILike(`${name}%`),
+      },
+    });
+    return genre ? genre.id : null;
+  }
+
+  //----------------------------------------------------------------
   async findAll(): Promise<any[]> {
     const movies = await this.movieRepository.find({
       relations: ['genre'], // Incluye la relación con 'genre'
@@ -152,5 +203,24 @@ export class MoviesService {
       overview: movie.overview,
       genre: movie.genre ? movie.genre.description : null, // Solo la descripción del género
     };
+  }
+
+  async findAllByYear(year: number): Promise<any[]> {
+    const movies = await this.movieRepository.find({
+      where: {
+        release_year: year,
+      },
+      relations: ['genre'], // Incluye la relación con 'genre'
+    });
+
+    // Transformar la respuesta para solo incluir la descripción del género
+    return movies.map((movie) => ({
+      id: movie.id,
+      title: movie.title,
+      release_year: movie.release_year,
+      poster: movie.poster,
+      overview: movie.overview,
+      genre: movie.genre ? movie.genre.description : null, // Solo la descripción del género
+    }));
   }
 }

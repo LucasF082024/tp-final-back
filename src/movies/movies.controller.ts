@@ -36,6 +36,23 @@ export class MoviesController {
     return this.moviesService.findByName(movie);
   }
 
+  @Get('genre/:genre')
+  findAllByGenre(@Param('genre') genre: string) {
+    return this.moviesService.findAllByGenre(genre);
+  }
+
+  @Get('year/:year')
+  async findAllByYear(@Param('year') year: string) {
+    // Convertir el año de string a número
+    const numericYear = parseInt(year, 10);
+
+    if (isNaN(numericYear)) {
+      throw new Error('Invalid year format.');
+    }
+
+    return this.moviesService.findAllByYear(numericYear);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateMovieDto: UpdateMovieDto) {
     return this.moviesService.update(+id, updateMovieDto);
