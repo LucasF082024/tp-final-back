@@ -6,6 +6,7 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ActiveUserInterface } from 'src/common/interfaces/active-user.interface';
 import { User } from 'src/users/entities/user.entity';
+import { Role } from 'src/common/enums/role.enum';
 
 @Injectable()
 export class ReviewsService {
@@ -20,7 +21,8 @@ export class ReviewsService {
     return this.reviewRepository.save(createReviewDto);
   }
 
-  async findAll({ email }: { email: string }): Promise<any[]> {
+  async findAll(us): Promise<any[]> {
+    const { email, role } = us;
     // Encuentra el usuario por correo electrónico
     const user = await this.userRepository.findOne({
       where: { email: email },
@@ -34,13 +36,21 @@ export class ReviewsService {
     const userId = user.id;
 
     // Busca todas las reseñas asociadas con el ID del usuario
-    const reviews = await this.reviewRepository.find({
-      where: { user: { id: userId } },
-      relations: ['movie'], // Incluye la relación con Movie
-    });
+    let reviews;
+    if (role !== Role.ADMIN) {
+      reviews = await this.reviewRepository.find({
+        where: { user: { id: userId } },
+        relations: ['movie', 'user'], // Incluye la relación con Movie
+      });
+    } else {
+      reviews = await this.reviewRepository.find({
+        relations: ['movie', 'user'],
+      });
+    }
 
     // Formatea la respuesta para incluir el nombre de la película y el id
     return reviews.map((review) => ({
+      name: review.user.name,
       id: review.id,
       rating: review.rating,
       review: review.text,
